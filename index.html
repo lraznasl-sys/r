@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jomor Design | Branding &amp; Websites | Montreal</title>
+  <meta name="description" content="I help businesses stand out by creating badass visual identities and awesome websites." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Rajdhani:wght@400;500;600;700&family=Volkhov:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">Jomor Design</a>
+
+    <div class="nav__links">
+      <a href="work.html" class="nav__link">Work</a>
+      <a href="about.html" class="nav__link">About</a>
+    </div>
+
+    <div class="nav__info">
+      <a href="mailto:jomor@jomordesign.com" class="nav__contact">jomor@jomordesign.com</a>
+      <a href="tel:5142223461" class="nav__contact">514-222-3461</a>
+      <div class="nav__social">
+        <a href="#" target="_blank" rel="noopener">FB</a>
+        <a href="#" target="_blank" rel="noopener">IG</a>
+      </div>
+      <a href="mailto:jomor@jomordesign.com" class="nav__cta">Start a Project</a>
+    </div>
+
+    <button class="nav__burger" id="burgerBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="mailto:jomor@jomordesign.com" class="nav__contact">jomor@jomordesign.com</a>
+    <a href="tel:5142223461" class="nav__contact">514-222-3461</a>
+    <a href="mailto:jomor@jomordesign.com" class="nav__cta" style="border:1px solid #fff;padding:14px 36px;">Start a Project</a>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+
+    <!-- Decorative dot grid -->
+    <div class="hero__deco" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__label">Montreal-based designer &mdash; Since 2015</p>
+      <h1 class="hero__title">
+        I help<br />
+        businesses<br />
+        <span class="outline">stand out</span>
+      </h1>
+      <p class="hero__subtitle">
+        By creating badass visual identities<br />and awesome websites
+      </p>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item filled">Branding</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Web Design</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item filled">Identity</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Visual Systems</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item filled">Branding</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Web Design</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item filled">Identity</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Visual Systems</span>
+      <span class="marquee-item"><span>✦</span></span>
+    </div>
+  </div>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <section class="portfolio" id="work">
+    <div class="section__header reveal">
+      <div>
+        <span class="section__num">01</span>
+        <h2 class="section__title">Selected<br /><span class="outline">Work</span></h2>
+      </div>
+      <a href="work.html" class="section__link">View all projects &rarr;</a>
+    </div>
+
+    <div class="portfolio__grid">
+
+      <!-- Project 1: opoint — full width -->
+      <a href="work.html#opoint" class="project-card" data-color="dark-blue">
+        <div class="project-card__bg"></div>
+        <!-- Animated visual inside the card -->
+        <div class="project-card__visual" style="
+          position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+          overflow:hidden;
+        ">
+          <div style="
+            width:60%;height:60%;
+            border:1px solid rgba(255,255,255,0.08);
+            display:flex;align-items:center;justify-content:center;
+            position:relative;
+          ">
+            <span style="
+              font-family:'Rajdhani',sans-serif;
+              font-size:clamp(4rem,10vw,10rem);
+              font-weight:700;
+              letter-spacing:-0.02em;
+              color:rgba(255,255,255,0.07);
+              text-transform:uppercase;
+            ">opoint</span>
+            <div style="
+              position:absolute;
+              width:100px;height:100px;
+              border-radius:50%;
+              border:1px solid rgba(255,255,255,0.12);
+            "></div>
+          </div>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__num">01</span>
+          <h3 class="project-card__title">opoint</h3>
+          <span class="project-card__type">Identity + Website</span>
+        </div>
+        <div class="project-card__arrow">
+          <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
+      <!-- Project 2: SPYSCAPE -->
+      <a href="work.html#spyscape" class="project-card" data-color="dark-red">
+        <div class="project-card__bg"></div>
+        <div class="project-card__visual" style="
+          position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;
+        ">
+          <span style="
+            font-family:'Rajdhani',sans-serif;
+            font-size:clamp(3rem,8vw,8rem);
+            font-weight:700;
+            text-transform:uppercase;
+            color:rgba(255,255,255,0.06);
+            letter-spacing:0.1em;
+          ">007</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__num">02</span>
+          <h3 class="project-card__title">SPYSCAPE</h3>
+          <span class="project-card__type">Website</span>
+        </div>
+        <div class="project-card__arrow">
+          <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
+      <!-- Project 3: LE VERMEIL -->
+      <a href="work.html#le-vermeil" class="project-card" data-color="dark-gold">
+        <div class="project-card__bg"></div>
+        <div class="project-card__visual" style="
+          position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;
+        ">
+          <span style="
+            font-family:'Volkhov',serif;
+            font-size:clamp(2.5rem,6vw,7rem);
+            font-style:italic;
+            color:rgba(255,255,255,0.06);
+            letter-spacing:0.02em;
+          ">Vermeil</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__num">03</span>
+          <h3 class="project-card__title">Le Vermeil</h3>
+          <span class="project-card__type">Identity + Website</span>
+        </div>
+        <div class="project-card__arrow">
+          <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
+      <!-- Project 4: CHIRO ACTIF -->
+      <a href="work.html#chiro-actif" class="project-card" data-color="dark-green">
+        <div class="project-card__bg"></div>
+        <div class="project-card__visual" style="
+          position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;
+        ">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+            <div style="width:60px;height:60px;border:1px solid rgba(255,255,255,0.12);border-radius:50%;"></div>
+            <span style="
+              font-family:'Rajdhani',sans-serif;
+              font-size:1rem;
+              letter-spacing:0.3em;
+              text-transform:uppercase;
+              color:rgba(255,255,255,0.1);
+            ">Chiro</span>
+          </div>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__num">04</span>
+          <h3 class="project-card__title">Chiro Actif</h3>
+          <span class="project-card__type">Identity</span>
+        </div>
+        <div class="project-card__arrow">
+          <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
+      <!-- Project 5: NORTHAND — full width -->
+      <a href="work.html#northand" class="project-card" data-color="dark-purple" style="grid-column: 1 / -1; aspect-ratio: 16/7;">
+        <div class="project-card__bg"></div>
+        <div class="project-card__visual" style="
+          position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;
+        ">
+          <span style="
+            font-family:'Rajdhani',sans-serif;
+            font-size:clamp(5rem,14vw,15rem);
+            font-weight:700;
+            text-transform:uppercase;
+            color:rgba(255,255,255,0.04);
+            letter-spacing:-0.02em;
+            line-height:1;
+          ">NORTHAND</span>
+        </div>
+        <div class="project-card__overlay">
+          <span class="project-card__num">05</span>
+          <h3 class="project-card__title">Northand</h3>
+          <span class="project-card__type">Website</span>
+        </div>
+        <div class="project-card__arrow">
+          <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section" id="services">
+    <div class="section__header reveal">
+      <div>
+        <span class="section__num">02</span>
+        <h2 class="section__title">What I<br /><span class="outline">Do</span></h2>
+      </div>
+    </div>
+    <div class="services__list reveal">
+      <div class="service-item">
+        <div class="service-item__num">01</div>
+        <h3 class="service-item__title">Brand Identity</h3>
+        <p class="service-item__desc">
+          I build visual identities that are original, memorable, and built to last.
+          From logo systems to full brand guidelines — every touchpoint considered.
+        </p>
+        <div class="service-item__tags">
+          <span class="service-item__tag">Logo Design</span>
+          <span class="service-item__tag">Typography</span>
+          <span class="service-item__tag">Colour Systems</span>
+          <span class="service-item__tag">Brand Guidelines</span>
+          <span class="service-item__tag">Stationery</span>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-item__num">02</div>
+        <h3 class="service-item__title">Web Design</h3>
+        <p class="service-item__desc">
+          Websites that are fast, beautiful, and actually convert. Designed with
+          intention — built to perform on every screen size.
+        </p>
+        <div class="service-item__tags">
+          <span class="service-item__tag">UI Design</span>
+          <span class="service-item__tag">UX Strategy</span>
+          <span class="service-item__tag">Webflow</span>
+          <span class="service-item__tag">Responsive</span>
+          <span class="service-item__tag">CMS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===================== ABOUT STRIP ===================== -->
+  <section class="about-strip reveal" id="about">
+    <div>
+      <h2 class="about-strip__title">
+        The<br />
+        <span class="outline">Designer</span><br />
+        Behind It
+      </h2>
+      <div class="about-strip__stats">
+        <div class="stat">
+          <div class="stat__num">10+</div>
+          <div class="stat__label">Years</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">50+</div>
+          <div class="stat__label">Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">4</div>
+          <div class="stat__label">Awards</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="about-strip__body">
+        <p style="font-family:'Volkhov',serif;font-size:1.05rem;color:#888;line-height:1.85;">
+          Hi, I'm Jomor — a Montreal-based branding and web designer with a thing for clean lines,
+          bold typography, and ideas that actually mean something.
+        </p>
+        <p style="font-family:'Volkhov',serif;font-size:1.05rem;color:#888;line-height:1.85;margin-top:20px;">
+          I've been told I'm a genius by 78% of my clients. The other 22% say "sexy genius."
+          Either way, I help businesses stand out by crafting visual identities and websites
+          that are as functional as they are beautiful.
+        </p>
+        <p style="font-family:'Volkhov',serif;font-size:1.05rem;color:#888;line-height:1.85;margin-top:20px;">
+          Sometimes I do great work. Other times I do mediocre push-ups.
+        </p>
+      </p>
+      <a href="about.html" class="about-strip__cta">Learn more about me &rarr;</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===================== SECOND MARQUEE ===================== -->
+  <div class="marquee-wrap">
+    <div class="marquee-track" style="animation-direction:reverse;">
+      <span class="marquee-item filled">Montreal</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Award Winning</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item filled">Awwwards</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Originality</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item filled">Montreal</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Award Winning</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item filled">Awwwards</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Originality</span>
+      <span class="marquee-item"><span>✦</span></span>
+    </div>
+  </div>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact-section reveal" id="contact">
+    <p class="contact-section__eyebrow">Let's make something great together</p>
+    <h2 class="contact-section__title">
+      Tell me<br />
+      what you<br />
+      <span class="outline">want</span>
+    </h2>
+    <a href="mailto:jomor@jomordesign.com" class="contact-section__email">
+      jomor@jomordesign.com
+    </a>
+    <a href="mailto:jomor@jomordesign.com" class="contact-section__btn">
+      Start a Project
+    </a>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <p class="footer__copy">&copy;2019 Jomor Design &mdash; All rights reserved</p>
+    <div class="footer__links">
+      <a href="work.html" class="footer__link">Work</a>
+      <a href="about.html" class="footer__link">About</a>
+      <a href="#" class="footer__link">Facebook</a>
+      <a href="#" class="footer__link">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

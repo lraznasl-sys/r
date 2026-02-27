@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Jomor Design</title>
+  <meta name="description" content="Montreal-based branding and web designer helping businesses stand out." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Rajdhani:wght@400;500;600;700&family=Volkhov:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ---- About page extras ---- */
+    .about-photo {
+      padding: 0 48px 120px;
+    }
+    .about-photo__frame {
+      width: 100%;
+      max-height: 60vh;
+      background: var(--grey-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .about-photo__placeholder {
+      font-family: var(--font-head);
+      font-size: clamp(8rem, 20vw, 20rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.04);
+      letter-spacing: -0.02em;
+      user-select: none;
+    }
+    .about-photo__caption {
+      margin-top: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--grey);
+      text-align: right;
+    }
+
+    /* Process */
+    .process {
+      padding: 0 48px 120px;
+    }
+    .process__steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 64px;
+    }
+    .process-step {
+      background: var(--bg);
+      padding: 40px 32px;
+      transition: background 0.3s;
+    }
+    .process-step:hover { background: var(--grey-dark); }
+    .process-step__num {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      color: var(--grey);
+      margin-bottom: 24px;
+    }
+    .process-step__title {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+    .process-step__desc {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--grey);
+      line-height: 1.7;
+    }
+
+    /* Clients / logos */
+    .clients {
+      padding: 0 48px 120px;
+    }
+    .clients__logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border: 1px solid var(--border);
+      margin-top: 64px;
+    }
+    .client-logo {
+      flex: 0 0 calc(100% / 4);
+      padding: 40px 32px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .client-logo span {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.25);
+      transition: color 0.3s;
+    }
+    .client-logo:hover span { color: var(--white); }
+
+    @media(max-width: 1024px) {
+      .about-photo, .process, .clients { padding-left: 32px; padding-right: 32px; }
+      .process__steps { grid-template-columns: repeat(2, 1fr); }
+      .client-logo { flex: 0 0 50%; }
+    }
+    @media(max-width: 768px) {
+      .about-photo, .process, .clients { padding-left: 24px; padding-right: 24px; }
+      .process__steps { grid-template-columns: 1fr; }
+      .client-logo { flex: 0 0 50%; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">Jomor Design</a>
+    <div class="nav__links">
+      <a href="work.html" class="nav__link">Work</a>
+      <a href="about.html" class="nav__link">About</a>
+    </div>
+    <div class="nav__info">
+      <a href="mailto:jomor@jomordesign.com" class="nav__contact">jomor@jomordesign.com</a>
+      <a href="tel:5142223461" class="nav__contact">514-222-3461</a>
+      <div class="nav__social">
+        <a href="#" target="_blank" rel="noopener">FB</a>
+        <a href="#" target="_blank" rel="noopener">IG</a>
+      </div>
+      <a href="mailto:jomor@jomordesign.com" class="nav__cta">Start a Project</a>
+    </div>
+    <button class="nav__burger" id="burgerBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="mailto:jomor@jomordesign.com" class="nav__contact">jomor@jomordesign.com</a>
+    <a href="tel:5142223461" class="nav__contact">514-222-3461</a>
+    <a href="mailto:jomor@jomordesign.com" class="nav__cta" style="border:1px solid #fff;padding:14px 36px;">Start a Project</a>
+  </div>
+
+  <!-- PAGE INTRO -->
+  <div class="about-intro">
+    <div class="reveal">
+      <h1 class="about-intro__title">
+        Hi,<br />
+        I'm<br />
+        <span class="outline">Jomor</span>
+      </h1>
+    </div>
+    <div class="about-intro__body reveal reveal-delay-2">
+      <p>
+        Montreal-based branding and web designer with a genuine passion for creating
+        <strong>visual identities and websites</strong> that actually mean something.
+      </p>
+      <p>
+        I've been doing this since 2015 — working with startups, service businesses,
+        restaurants, healthcare providers, and everyone in between. My approach is
+        simple: understand the client, deliver something original, and make the
+        process enjoyable for everyone involved.
+      </p>
+      <p>
+        I believe great design starts with a great relationship. That means asking
+        the right questions, listening hard, and being honest about what will and
+        won't work. No fluff. No generic templates. Just real, thoughtful work.
+      </p>
+      <p>
+        78% of my clients say I'm a genius. The other 22% say "sexy genius."
+      </p>
+      <p>
+        Sometimes I do great work. Other times I do mediocre push-ups. But I always
+        show up and give it everything I have.
+      </p>
+      <a href="mailto:jomor@jomordesign.com" class="about-strip__cta" style="display:inline-block;margin-top:36px;font-family:'Rajdhani',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;border-bottom:1px solid #fff;padding-bottom:4px;">
+        Let's work together &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- PHOTO PLACEHOLDER -->
+  <div class="about-photo reveal">
+    <div class="about-photo__frame" style="min-height:320px;">
+      <span class="about-photo__placeholder">JD</span>
+    </div>
+    <p class="about-photo__caption">Jomor Design Studio &mdash; Montreal, QC</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- VALUES -->
+  <section class="values reveal">
+    <div class="section__header">
+      <div>
+        <span class="section__num">01</span>
+        <h2 class="section__title">What I<br /><span class="outline">Believe</span></h2>
+      </div>
+    </div>
+    <div class="values__grid">
+      <div class="value-item">
+        <div class="value-item__num">01</div>
+        <h3 class="value-item__title">Hard Work</h3>
+        <p class="value-item__desc">
+          Great design doesn't happen by accident. It takes dedication, iteration, and
+          a willingness to push past the first good idea to find the great one.
+        </p>
+      </div>
+      <div class="value-item">
+        <div class="value-item__num">02</div>
+        <h3 class="value-item__title">Client Relationships</h3>
+        <p class="value-item__desc">
+          Trust is everything. I treat every client like a long-term partner — because
+          the best work comes from genuine collaboration and mutual respect.
+        </p>
+      </div>
+      <div class="value-item">
+        <div class="value-item__num">03</div>
+        <h3 class="value-item__title">Originality</h3>
+        <p class="value-item__desc">
+          Templates are lazy. Every project deserves a custom solution built from
+          scratch around the brand's unique personality and goals.
+        </p>
+      </div>
+      <div class="value-item">
+        <div class="value-item__num">04</div>
+        <h3 class="value-item__title">Enjoyment</h3>
+        <p class="value-item__desc">
+          If the process isn't fun, something's wrong. Design should be energizing —
+          for the designer and the client alike.
+        </p>
+      </div>
+      <div class="value-item">
+        <div class="value-item__num">05</div>
+        <h3 class="value-item__title">Authenticity</h3>
+        <p class="value-item__desc">
+          No smoke and mirrors. I'm straightforward about timelines, costs, and
+          what's realistic — and I only promise what I can deliver.
+        </p>
+      </div>
+      <div class="value-item">
+        <div class="value-item__num">06</div>
+        <h3 class="value-item__title">Excellence</h3>
+        <p class="value-item__desc">
+          The bar is always high. Whether it's a logo or a full website, I approach
+          every project with the same commitment to quality.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROCESS -->
+  <section class="process reveal">
+    <div class="section__header">
+      <div>
+        <span class="section__num">02</span>
+        <h2 class="section__title">How It<br /><span class="outline">Works</span></h2>
+      </div>
+    </div>
+    <div class="process__steps">
+      <div class="process-step">
+        <div class="process-step__num">01</div>
+        <h3 class="process-step__title">Discovery</h3>
+        <p class="process-step__desc">
+          We talk. I ask a lot of questions. I need to understand your business,
+          your audience, and what success looks like for you.
+        </p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num">02</div>
+        <h3 class="process-step__title">Strategy</h3>
+        <p class="process-step__desc">
+          Before anything gets designed, we align on direction. Positioning,
+          tone, competitive landscape — the foundation everything else is built on.
+        </p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num">03</div>
+        <h3 class="process-step__title">Design</h3>
+        <p class="process-step__desc">
+          This is where it gets real. Concepts, iterations, refinements — until
+          we land on something that makes you say "that's exactly it."
+        </p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num">04</div>
+        <h3 class="process-step__title">Delivery</h3>
+        <p class="process-step__desc">
+          Files, guidelines, and everything you need to use your new identity
+          with confidence. And I stick around if questions come up.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CLIENTS -->
+  <section class="clients reveal">
+    <div class="section__header">
+      <div>
+        <span class="section__num">03</span>
+        <h2 class="section__title">Clients &amp;<br /><span class="outline">Partners</span></h2>
+      </div>
+    </div>
+    <div class="clients__logos">
+      <div class="client-logo"><span>opoint</span></div>
+      <div class="client-logo"><span>SPYSCAPE</span></div>
+      <div class="client-logo"><span>Le Vermeil</span></div>
+      <div class="client-logo"><span>Chiro Actif</span></div>
+      <div class="client-logo"><span>Kopema</span></div>
+      <div class="client-logo"><span>Northand</span></div>
+      <div class="client-logo"><span>Gymnase</span></div>
+      <div class="client-logo"><span>Le Royaume</span></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap reveal">
+    <div class="marquee-track">
+      <span class="marquee-item filled">Branding</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Web Design</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item filled">Identity</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Montreal</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item filled">Branding</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Web Design</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item filled">Identity</span>
+      <span class="marquee-item"><span>✦</span></span>
+      <span class="marquee-item">Montreal</span>
+      <span class="marquee-item"><span>✦</span></span>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact-section reveal" id="contact">
+    <p class="contact-section__eyebrow">Tell me what you want</p>
+    <h2 class="contact-section__title">
+      Let's<br />
+      <span class="outline">work</span><br />
+      together
+    </h2>
+    <a href="mailto:jomor@jomordesign.com" class="contact-section__email">jomor@jomordesign.com</a>
+    <a href="mailto:jomor@jomordesign.com" class="contact-section__btn">Start a Project</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__copy">&copy;2019 Jomor Design &mdash; All rights reserved</p>
+    <div class="footer__links">
+      <a href="work.html" class="footer__link">Work</a>
+      <a href="about.html" class="footer__link">About</a>
+      <a href="#" class="footer__link">Facebook</a>
+      <a href="#" class="footer__link">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
